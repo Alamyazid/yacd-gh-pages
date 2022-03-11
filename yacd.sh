@@ -9,4 +9,3 @@ git clone https://github.com/Alamyazid/yacd-gh-pages
 cd .config/clash/yacd-gh-pages
 cp -r -f config.yaml $HOME/.config/clash
 cd
-rm yacd.sh
