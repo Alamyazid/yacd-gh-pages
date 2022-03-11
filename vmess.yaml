@@ -1,0 +1,15 @@
+proxies:
+ - name: "Vmess"
+   server: HOST_SERVER #Jika pake methode Webscoket , balikan
+   port: 443
+   type: vmess
+   uuid: UUID_SERVER
+   alterId: 0
+   cipher: auto
+   tls: true
+   skip-cert-verify: true
+   network: ws
+   ws-opts:
+     path: /vvip
+     headers:
+       Host: BUG_SNI

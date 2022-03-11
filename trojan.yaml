@@ -1,0 +1,9 @@
+proxies:
+ - name: "Trojan"
+   type: trojan
+   server: HOST_SERVER
+   port: 443
+   password: PASS_SERVER
+   udp: true
+   sni: BUG_SNI
+   skip-cert-verify: true
