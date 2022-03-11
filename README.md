@@ -13,3 +13,10 @@ $ clash
 
 #buka fitur clash di Browser
 http://127.0.0.1:9090/ui/#/proxies
+
+Note:
+Jika ingin edit config.yaml
+
+$ cd .cinfig/clash/config.yaml
+
+Jika selesai silahkan ketik ctrl + x + y enter.
