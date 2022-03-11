@@ -46,7 +46,7 @@ proxy-groups:
   disable-udp: false
   use:
     - Vmess
-  #- Trojan 
+    - Trojan 
   url: http://www.gstatic.com/generate_204
   interval: '300'
    
