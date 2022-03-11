@@ -6,10 +6,10 @@ proxies:
    uuid: UUID_SERVER
    alterId: 0
    cipher: auto
-   tls: true
-   skip-cert-verify: true
+   tls: false
+   skip-cert-verify: false
    network: ws
    ws-opts:
-     path: /vvip
+     path: /v2ray
      headers:
        Host: BUG_SNI
