@@ -1,5 +1,7 @@
 # auto install clash for termux
 
+$ pkg install wget
+
 $ wget https://raw.githubusercontent.com/Alamyazid/yacd-gh-pages/master/yacd.sh && chmod +x yacd.sh && ./yacd.sh
 
 #set di proxy & port di aksespoinname/apn.
@@ -17,6 +19,6 @@ http://127.0.0.1:9090/ui/#/proxies
 Note:
 Jika ingin edit config.yaml
 
-$ cd .cinfig/clash/config.yaml
+$ nano .cinfig/clash/config.yaml
 
 Jika selesai silahkan ketik ctrl + x + y enter.
