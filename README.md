@@ -4,21 +4,24 @@ $ pkg install wget
 
 $ wget https://raw.githubusercontent.com/Alamyazid/yacd-gh-pages/master/yacd.sh && chmod +x yacd.sh && ./yacd.sh
 
+#edit config vmess dengan perintah
+$ micro .config/clash/vmess.yaml
+#cara simpan tekan ctrl + s & ctrl + p
+
+#edit config trojan dengan perintah
+$ micro .config/clash/trojan.yaml
+#cara simpan tekan ctrl + s & ctrl + p
+
+
 #set di proxy & port di aksespoinname/apn.
 
 proxy:127.0.0.1
 port:10809
 
+
 #jalankan clash di termux
 
-$ clash
+$clash
 
 #buka fitur clash di Browser
 http://127.0.0.1:9090/ui/#/proxies
-
-Note:
-Jika ingin edit config.yaml
-
-$ nano .cinfig/clash/config.yaml
-
-Jika selesai silahkan ketik ctrl + x + y enter.
