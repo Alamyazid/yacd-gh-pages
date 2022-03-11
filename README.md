@@ -9,7 +9,7 @@ port:10809
 
 #jalankan clash di termux
 
-$clash
+$ clash
 
 #buka fitur clash di Browser
 http://127.0.0.1:9090/ui/#/proxies
