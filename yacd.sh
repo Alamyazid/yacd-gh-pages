@@ -7,8 +7,8 @@ cd .config/clash
 git clone https://github.com/Alamyazid/yacd-gh-pages
 cd yacd-gh-pages
 cp -r -f config.yaml $HOME/.config/clash
-#cp -r -f vmess.yaml $HOME/.config/clash
-#cp -r -f trojan.yaml $HOME/.config/clash
+cp -r -f vmess.yaml $HOME/.config/clash
+cp -r -f trojan.yaml $HOME/.config/clash
 cd
 rm yacd.sh
 
