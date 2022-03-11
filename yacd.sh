@@ -6,8 +6,6 @@ pkg install micro
 cd .config
 cd clash
 git clone https://github.com/Alamyazid/yacd-gh-pages
-cd
-sleep 2
 cd .config/clash/yacd-gh-pages
 cp -r -f config.yaml $HOME/.config/clash
 cd
