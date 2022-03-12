@@ -57,14 +57,17 @@ micro .config/clash/trojan.yaml
 clear
 cd .config/clash
 rm -rf yacd-gh-pages
-unzip yacdv2.zip
+unzip yacd-gh-pages2.zip
+clash -t
 cd
 ;;
 5)
 clear
 cd .config/clash
-rm -rf yacd-gh-pages
-unzip yacdv1.zip
+rm -rf yacd-gh-pages2
+unzip yacd-gh-pages1.zip
+clash -t
+cd
 ;;
 x)
 exit
