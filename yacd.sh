@@ -11,6 +11,8 @@ cp -r -f config.yaml $HOME/.config/clash
 cp -r -f Country.mmdb $HOME/.config/clash
 cp -r -f vmess.yaml $HOME/.config/clash
 cp -r -f trojan.yaml $HOME/.config/clash
+cp -r -f yacdv1.zip $HOME/.config/clash
+cp -r -f yacdv2.zip $HOME/.config/clash
 cd
 cd ..
 cd usr/bin
