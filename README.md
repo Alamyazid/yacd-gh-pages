@@ -5,13 +5,8 @@ $ pkg install wget
 $ wget https://raw.githubusercontent.com/Alamyazid/yacd-gh-pages/master/yacd.sh && chmod +x yacd.sh && ./yacd.sh
 
 #edit config vmess dengan perintah
-$ micro .config/clash/vmess.yaml
+$ micro .config/clash/config.yaml
 #cara simpan tekan ctrl + s & ctrl + p
-
-#edit config trojan dengan perintah
-$ micro .config/clash/trojan.yaml
-#cara simpan tekan ctrl + s & ctrl + p
-
 
 #set di proxy & port di aksespoinname/apn.
 
