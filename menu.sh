@@ -58,7 +58,7 @@ clear
 cd .config/clash
 rm -rf yacd-gh-pages
 unzip yacd-gh-pages2.zip
-cp yacd-gh-pages2 yacd-gh-pages
+mv yacd-gh-pages2 yacd-gh-pages
 clash -t
 clear
 echo -e "HAPUS CACHE BROWSER"
@@ -69,7 +69,7 @@ clear
 cd .config/clash
 rm -rf yacd-gh-pages
 unzip yacd-gh-pages1.zip
-cp yacd-gh-pages1 yacd-gh-pages
+mv yacd-gh-pages1 yacd-gh-pages
 clash -t
 clear
 echo -e "HAPUS CACHE BROWSER"
