@@ -63,6 +63,7 @@ clash -t
 clear
 echo -e "HAPUS CACHE BROWSER"
 cd
+clash
 ;;
 5)
 clear
@@ -74,6 +75,7 @@ clash -t
 clear
 echo -e "HAPUS CACHE BROWSER"
 cd
+clash
 ;;
 x)
 exit
