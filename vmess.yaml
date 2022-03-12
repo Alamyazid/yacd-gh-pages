@@ -1,15 +1,16 @@
 proxies:
  - name: "Vmess"
    server: HOST_SERVER #Jika pake methode Webscoket , balikan
-   port: 443
+   port: 80
    type: vmess
    uuid: UUID_SERVER
    alterId: 0
    cipher: auto
-   tls: false
-   skip-cert-verify: false
+   tls: false  #(true) untuk ssl
+   skip-cert-verify: false #(true) untuk ssl
    network: ws
    ws-opts:
      path: /v2ray
      headers:
        Host: BUG_SNI
+#
