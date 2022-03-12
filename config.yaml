@@ -1,0 +1,55 @@
+port: 7890
+socks-port: 7891
+#redir-port: 7892
+mixed-port: 7893
+#tproxy-port: 7895
+mode: global
+log-level: info
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret : ""
+bind-address: "*"
+external-ui: yacd-gh-pages
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 127.0.0.1:7894
+  use-hosts: true
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - tls://1dot1dot1dot1.cloudflare-dns.com
+  fallback:
+    - https://dns.google/dns-query
+
+proxy-providers:
+  Vmess:
+    type: file
+    path: "./vmess.yaml"
+    health-check:
+      enable: false
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Trojan:
+    type: file
+    path: "./trojan.yaml"
+    health-check:
+      enable: false
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      
+#Gunakan tanda pagar menghiden, jika salah satu server tidak kepakai
+proxy-groups:
+- name: SERVER
+  type: load-balance
+  strategy: consistent-hashing
+  disable-udp: false
+  use:
+    - Vmess
+  #- Trojan 
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+   
+rules:
+- MATCH,SERVER
+- MATCH,GLOBAL
