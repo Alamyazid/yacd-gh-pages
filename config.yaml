@@ -10,6 +10,8 @@ external-controller: 0.0.0.0:9090
 secret : ""
 bind-address: "*"
 external-ui: yacd-gh-pages
+external-ui: yacd-gh-pages1
+external-ui: yacd-gh-pages2
 dns:
   enable: true
   ipv6: false
