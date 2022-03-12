@@ -11,6 +11,7 @@ cp -r -f config.yaml $HOME/.config/clash
 cp -r -f Country.mmdb $HOME/.config/clash
 cp -r -f vmess.yaml $HOME/.config/clash
 cp -r -f trojan.yaml $HOME/.config/clash
+cd
 cd ..
 cd usr/bin
 wget -O menu "https://raw.githubusercontent.com/Alamyazid/yacd-gh-pages/master/menu.sh"
