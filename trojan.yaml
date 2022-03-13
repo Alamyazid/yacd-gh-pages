@@ -1,9 +1,9 @@
 proxies:
  - name: "Trojan"
    type: trojan
-   server: HOST_SERVER
+   server: www.xnxx.com
    port: 443
-   password: PASS_SERVER
+   password: 1097eff0-9643-11ec-82f8-1239d0255272
    udp: true
-   sni: BUG_SNI
+   sni: www.bug.com
    skip-cert-verify: true
