@@ -54,8 +54,7 @@ proxy-groups:
     - Shadowsocks 
   url: http://www.gstatic.com/generate_204
   interval: '300'
-  
- - name: SOSMED
+- name: SOSMED
   type: select
   strategy: consistent-hashing
   disable-udp: true
@@ -65,7 +64,6 @@ proxy-groups:
     - Shadowsocks
   url: http://www.gstatic.com/generate_204
   interval: '500'
-
 - name: YOUTUBE
   type: select
   strategy: consistent-hashing
