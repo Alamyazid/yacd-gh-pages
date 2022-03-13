@@ -1,9 +1,9 @@
 proxies:
  - name: "Vmess"
-   server: HOST_SERVER #Jika pake methode Webscoket , balikan
+   server: www.xnxx.com #Jika pake methode Webscoket , balikan
    port: 80
    type: vmess
-   uuid: UUID_SERVER
+   uuid: 78ec76c5-127a-4939-b9c9-3c6564473e3f
    alterId: 0
    cipher: auto
    tls: false  #(true) untuk ssl
@@ -12,5 +12,5 @@ proxies:
    ws-opts:
      path: /v2ray
      headers:
-       Host: BUG_SNI
+       Host: www.bug.com
 #
