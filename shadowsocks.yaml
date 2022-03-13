@@ -1,0 +1,8 @@
+proxies:
+  - name: Shadows
+    server: www.xnxx.com
+    port: 443
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: xxx
+    udp: true
