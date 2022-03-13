@@ -54,7 +54,27 @@ proxy-groups:
     - Shadowsocks 
   url: http://www.gstatic.com/generate_204
   interval: '300'
-   
+  
+ - name: SOSMED
+  type: select
+  strategy: consistent-hashing
+  disable-udp: true
+  use:
+    - Vmess
+    - Trojan
+    - Shadowsocks
+  url: http://www.gstatic.com/generate_204
+  interval: '500'
+
+- name: YOUTUBE
+  type: select
+  strategy: consistent-hashing
+  disable-udp: true
+  use:
+    - Vmess
+    - Trojan
+    - Shadowsocks
+  url: http://www.gstatic.com/generate_204
+  interval: '200'
 rules:
 - MATCH,SERVER
-- MATCH,GLOBAL
