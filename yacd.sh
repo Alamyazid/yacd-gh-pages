@@ -8,7 +8,7 @@ cd .config/clash
 git clone https://github.com/Alamyazid/yacd-gh-pages
 cd yacd-gh-pages
 cp -r -f config.yaml $HOME/.config/clash
-cp -r -f Country.mmdb $HOME/.config/clash
+#cp -r -f Country.mmdb $HOME/.config/clash
 cp -r -f vmess.yaml $HOME/.config/clash
 cp -r -f trojan.yaml $HOME/.config/clash
 cp -r -f shadowsocks.yaml $HOME/.config/clash
