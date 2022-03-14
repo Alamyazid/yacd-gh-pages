@@ -1,0 +1,107 @@
+port: 7890
+socks-port: 7891
+mixed-port: 10809
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret : ""
+bind-address: "*"
+external-ui: yacd-gh-pages
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 127.0.0.1:7894
+  use-hosts: true
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - 1.1.1.1
+  fallback:
+    - https://dns.google/dns-query
+
+proxy-providers:
+  Vmess:
+    type: file
+    path: "./vmess.yaml"
+    health-check:
+      enable: false
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Trojan:
+    type: file
+    path: "./trojan.yaml"
+    health-check:
+      enable: false
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Shadowsocks:
+    type: file
+    path: "./shadowsocks.yaml"
+    health-check:
+      enable: false
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  Trojan-go:
+    type: file
+    path: "./trojan-go.yaml"
+    health-check:
+       enable: false
+       url: http://www.gstatic.com/generate_204
+       interval: 300
+#Gunakan tanda pagar menghiden, jika salah satu server tidak kepakai
+proxy-groups:
+- name: VMESS
+  type: select
+  strategy: consistent-hashing
+  disable-udp: true
+  use:
+    - Vmess 
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+
+- name: TROJAN
+  type: select
+  strategy: consistent-hashing
+  disable-udp: true
+  use:
+    - Trojan
+  url: http://www.gstatic.com/generate_204
+  interval: '500'
+
+- name: SHADOWSOCKS
+  type: select
+  strategy: consistent-hashing
+  disable-udp: true
+  use:
+    - Shadowsocks
+  url: http://www.gstatic.com/generate_204
+  interval: '200'
+
+- name: TROJAN-GO
+  type: select
+  strategy: consistent-hashing
+  disable-udp: true
+  use:
+    - Trojan-go
+  url: http://www.gstatic.com/generate_204
+  interval: '200'
+
+- name: BEST-PING
+  type: url-test
+  strategy: consistent-hashing
+  use:
+    - Vmess
+    - Trojan
+    - Shadowsocks
+    - Trojan-go
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+
+rules:
+#- RULE,direct,DIRECT
+- MATCH,VMESS
+- MATCH,TROJAN
+- MATCH,SHADOWSOCKS
+- MATCH,TROJAN-GO
+- MATCH,BEST-PING

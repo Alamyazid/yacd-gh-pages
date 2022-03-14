@@ -1,0 +1,14 @@
+proxies:
+  - name: "XLTRGO"
+    server: 104.26.5.10
+    port: 443
+    type: trojan
+    password: aaa26c50-a2e0-11ec-ab78-1239d0255272
+    skip-cert-verify: true
+    sni: idtj-ikd.bonds.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: idtj-ikd.bonds.id
+    udp: true
