@@ -12,7 +12,7 @@ cp -r -f Country.mmdb $HOME/.config/clash
 cp -r -f vmess.yaml $HOME/.config/clash
 cp -r -f trojan.yaml $HOME/.config/clash
 cp -r -f trojan-go.yaml $HOME/.config/clash
-cp -r -f shadowsoks.yaml $HOME/.config/clash
+cp -r -f shadowsocks.yaml $HOME/.config/clash
 cp -r -f yacd-gh-pages1.zip $HOME/.config/clash
 cp -r -f yacd-gh-pages2.zip $HOME/.config/clash
 cd
