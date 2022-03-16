@@ -1,24 +1,23 @@
-port: 7890
+tproxy-port: 7890
 socks-port: 7891
+redir-port: 7892
 mixed-port: 10809
-mode: global
-log-level: silent
-allow-lan: true
-external-controller: 0.0.0.0:9090
-secret : ""
 bind-address: "*"
+mode: rule
+allow-lan: true
+log-level: silent
+external-controller: 0.0.0.0:9090
 external-ui: yacd-gh-pages
+unified-delay: true
+ipv6: false
 dns:
   enable: true
   ipv6: false
-  enhanced-mode: redir-host
-  listen: 127.0.0.1:7894
-  use-hosts: true
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
   nameserver:
-    - https://cloudflare-dns.com/dns-query
+    - 8.8.8.8
     - 1.1.1.1
-  fallback:
-    - https://dns.google/dns-query
 
 proxy-providers:
   Vmess:
@@ -54,7 +53,6 @@ proxy-groups:
 - name: VMESS
   type: select
   strategy: consistent-hashing
-  disable-udp: false
   use:
     - Vmess 
   url: http://www.gstatic.com/generate_204
@@ -63,7 +61,6 @@ proxy-groups:
 - name: TROJAN
   type: select
   strategy: consistent-hashing
-  disable-udp: false
   use:
     - Trojan
   url: http://www.gstatic.com/generate_204
@@ -72,7 +69,6 @@ proxy-groups:
 - name: SHADOWSOCKS
   type: select
   strategy: consistent-hashing
-  disable-udp: false
   use:
     - Shadowsocks
   url: http://www.gstatic.com/generate_204
@@ -81,7 +77,6 @@ proxy-groups:
 - name: TROJAN-GO
   type: select
   strategy: consistent-hashing
-  disable-udp: false
   use:
     - Trojan-go
   url: http://www.gstatic.com/generate_204
