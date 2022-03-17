@@ -1,4 +1,5 @@
 pkg update && pkg upgrade -y
+cd
 mkdir -p $HOME/.config/clash
 pkg install clash
 pkg install git
