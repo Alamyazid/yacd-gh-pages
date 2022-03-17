@@ -32,21 +32,21 @@ proxy-providers:
     type: file
     path: "./trojan.yaml"
     health-check:
-      enable: false
+      enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   Shadowsocks:
     type: file
     path: "./shadowsocks.yaml"
     health-check:
-      enable: false
+      enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
   Trojan-go:
     type: file
     path: "./trojan-go.yaml"
     health-check:
-       enable: false
+       enable: true
        url: http://www.gstatic.com/generate_204
        interval: 300
 #Gunakan tanda pagar menghiden, jika salah satu server tidak kepakai
@@ -54,6 +54,7 @@ proxy-groups:
 - name: VMESS
   type: select
   strategy: consistent-hashing
+  disable-udp: false
   use:
     - Vmess 
   url: http://www.gstatic.com/generate_204
@@ -62,6 +63,7 @@ proxy-groups:
 - name: TROJAN
   type: select
   strategy: consistent-hashing
+  disable-udp: false
   use:
     - Trojan
   url: http://www.gstatic.com/generate_204
@@ -70,6 +72,7 @@ proxy-groups:
 - name: SHADOWSOCKS
   type: select
   strategy: consistent-hashing
+  disable-udp: false
   use:
     - Shadowsocks
   url: http://www.gstatic.com/generate_204
@@ -78,6 +81,7 @@ proxy-groups:
 - name: TROJAN-GO
   type: select
   strategy: consistent-hashing
+  disable-udp: false
   use:
     - Trojan-go
   url: http://www.gstatic.com/generate_204
