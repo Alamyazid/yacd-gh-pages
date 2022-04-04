@@ -16,6 +16,7 @@ cp -r -f trojan-go.yaml $HOME/.config/clash
 cp -r -f shadowsocks.yaml $HOME/.config/clash
 cp -r -f yacd-gh-pages1.zip $HOME/.config/clash
 cp -r -f yacd-gh-pages2.zip $HOME/.config/clash
+cp -r -f yacd-gh-pages3.zip $HOME/.config/clash
 cd
 cd ..
 cd usr/bin
