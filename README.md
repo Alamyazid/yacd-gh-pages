@@ -7,7 +7,7 @@ $ pkg install wget
 $ wget https://raw.githubusercontent.com/Alamyazid/yacd-gh-pages/master/yacd.sh && chmod +x yacd.sh && ./yacd.sh
 
 #edit config vmess, trojan, ss, tr-go dengan perintah
-$ cara simpan tekan ctrl + s & ctrl + p
+$ cara simpan tekan ctrl + q & y
 
 #set di proxy & port di aksespoinname/apn.
 
